@@ -1,0 +1,114 @@
+/* :root {
+    --j-1: 1;
+    --j-2: 2;
+    --j-3: 3;
+    --j-4: 4;
+    --j-5: 5;
+    --j-6: 6;
+    --j-7: 7;
+    --j-8: 8;
+    --j-9: 9;
+    --j-10: 10;
+    --j-11: 11;
+    --j-12: 12;
+} */
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+h2{
+    color: black;
+    margin-right: 130px;
+    
+}
+
+.container{
+    background: plum;
+    border-radius: 50%;
+    padding: 20px;
+    /* outline: 15px solid black; */
+    outline-offset: 3px;
+    box-shadow: 0 0 80px palevioletred;
+}
+
+
+
+
+.clock{
+    position: relative;
+    border-radius: 50%;
+    width: 520PX;
+    height: 520PX;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid rgb(153, 16, 195);
+    outline: 10px solid black;
+}
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--j)));
+    inset: 15px;
+    text-align: center;
+}
+
+.clock span b{
+    transform: rotate(calc(-30deg * var(--j)));
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 200;
+    height: 50px;
+    width: 52px;
+}
+
+.clock::before{
+    /* content: ''; */
+    position: absolute;
+    width: 12px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    z-index: 1;
+}
+
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hand i{
+    position: absolute;
+    background: var(--clr);
+    height: var(--ht);
+    width: var(--wt);
+    z-index: 0;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #999;
+    
+  }
+
